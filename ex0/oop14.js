@@ -4,8 +4,8 @@ class Name {
         this.lastName = lastName;
     }
 
-    getFullName() {
-        return this.firstName + '_' + this.lastName;
+    getFullName(delimiter = '_') {
+        return this.firstName + delimiter + this.lastName;
     }
 }
 
@@ -23,6 +23,10 @@ class Company {
 
     addEmployee(name) {
         this.employees.push(name);
+    }
+
+    setEmployees(employees) {
+        this.employees = employees;
     }
 
     getEmployees() {
